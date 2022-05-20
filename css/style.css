@@ -1,0 +1,167 @@
+* { font-family: Montserrat; }
+.red { color: #d2001f !important; }
+.white { color: #ffffff !important; }
+
+/* контейнер для всего контента */
+    .container {
+        margin: 0 auto;
+        padding: 0 25px;
+        max-width: 1200px;
+    }
+
+/* стиль для кнопок с иконками слева */
+    .item-with-icon {
+        display: flex;
+        align-items: center;
+
+        user-select: none;
+        cursor: pointer;
+    }
+    .item-with-icon:hover * { color: #d2001f; }
+    .item-icon {
+        width: 15px;
+        height: 15px;
+    }
+    .item-text {
+        margin-left: 5px;
+
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 500;
+
+        transition: all 0.2s linear;
+    }
+
+/* стиль для кнопок с иконками по центру */
+    .btn-logo {
+        width: 80px;
+        position: relative;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background: transparent;
+        user-select: none;
+        cursor: pointer;
+    }
+    .btn-counter {
+        width: 15px;
+        height: 15px;
+
+        position: absolute;
+        right: 20px;
+        top: -5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 10px;
+        color: #ffffff;
+
+        background-color: #d2001f;
+        border-radius: 50%;
+    }
+    .btn-logo .item-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+
+/* ШАПКА */
+/* ШАПКА */
+/* ШАПКА */
+
+    .h-row__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* первая строка */
+        .header__row1 {
+            padding: 12px 0;
+            background-color: #181924;
+        }
+        .header__contacts {
+            width: 375px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .header__user {
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    /* вторая строка */
+        .header__row2 {
+            padding: 25px 0;
+            background-color: #0d0e17;
+            border-bottom: 3px solid #d2001f;
+        }
+        .logo {
+            font-size: 40px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+        .logo > span{
+            margin: 0 3px;
+        }
+        .header__searchbar {
+            width: 40%;
+            display: flex;
+
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .header__searchbar * { 
+            padding: 10px;
+            font-size: 14px; 
+        }
+        #search-category {
+            width: 100px;
+            border-right: 1px solid rgba(128, 128, 128, 0.496);
+        }
+        #search-text {
+            width: 100%;
+        }
+        #search-button {
+            color: #ffffff;
+            font-weight: 700;
+            background-color: #d2001f;
+        }
+        .header__wc {
+            width: 180px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+
+
+
+
+
+
+/* медиа-запросы */
+@media (max-width:1200px) {
+    .container { max-width: 970px; }
+}
+@media (max-width:992px) {
+    .container { max-width: 750px; }
+}
+@media (max-width:767px) {
+    .container { max-width: none; }
+    .h-row__content { flex-direction: column; }
+    .h-row__content > * { margin: 10px 0; }
+    .header__row1 { padding: 5px 0; }
+    .header__row2 { padding: 10px 0; }
+    .header__contacts {width: 350px; }
+    .header__searchbar { width: 90%; }
+    #search-category { width: 100px;}
+}

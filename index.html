@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="svg/logo-01.svg" type="image/svg">
+    <title>CPUX - интернет-магазин электроники</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
+    <link rel="stylesheet" href="css/normal.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- оболочка -->
+    <div class="wrapper">
+
+        <!-- шапка -->
+        <header class="header">
+            <!-- 1 строка шапки -->
+            <div class="header__row1">
+                <div class="container">
+                    <div class="h-row__content">
+
+                        <!-- контакты -->
+                        <div class="header__contacts">
+                            <!-- объекты с иконками -->
+                            <div class="item-with-icon">
+                                <img class="item-icon" src="svg/local_phone_icon.svg" alt="X">
+                                <span class="item-text">+44-729-84-01</span>
+                            </div>
+
+                            <div class="item-with-icon">
+                                <img class="item-icon" src="svg/email_letter_mail_icon.svg" alt="X">
+                                <span class="item-text">ohvatukj@gmail.com</span>
+                            </div>
+
+                            <div class="item-with-icon">
+                                <img class="item-icon" src="svg/location_map_pin_gps_icon.svg" alt="X">
+                                <span class="item-text">г. Минск</span>
+                            </div>
+                        </div>
+
+                        <!-- личный кабинет -->
+                        <div class="header__user">
+                            <!-- объекты с иконками -->
+                            <div class="item-with-icon">
+                                <img class="item-icon" src="svg/dollar_finance_money_icon.svg" alt="X">
+                                <span class="item-text">USD</span>
+                            </div>
+
+                            <div class="item-with-icon">
+                                <img class="item-icon" src="svg/user_users_icon.svg" alt="X">
+                                <span class="item-text">Мой аккаунт</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 2 строка шапки -->
+            <div class="header__row2">
+                <div class="container">
+                    <div class="h-row__content">
+
+                        <!-- логотип -->
+                        <a href="#" class="logo">XCPU<span class="red">.</span>BY</a>
+                        <!-- строка поиска (на флексе) -->
+                        <div class="header__searchbar">
+                            <select id="search-category" name="category">
+                                <option value="all" selected>Все</option>
+                                <option value="computers">Компьютеры</option>
+                                <option value="laptops">Ноутбуки</option>
+                            </select>
+                            <input id="search-text" type="text" placeholder="Поиск по каталогу">
+                            <button id="search-button">Поиск</button>
+                        </div>
+                        <!-- список желаний и корзина -->
+                        <div class="header__wc">
+                            <button id="wishlist" class="btn-logo">
+                                <div class="btn-counter"><span>0</span></div>
+                                <img class="item-icon" src="svg/heart_like_likes_love_icon.svg" alt="X">
+                                <span class="item-text">Избранные</span>
+                            </button>
+                            <button id="cart" class="btn-logo">
+                                <div class="btn-counter"><span>0</span></div>
+                                <img class="item-icon" src="svg/cart_shopping_ic_icon.svg" alt="X">
+                                <span class="item-text">Корзина</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- страница -->
+        <main class="page">
+
+        </main>
+
+        <!-- подвал -->
+        <footer class="footer">
+
+        </footer>
+
+    </div>
+    
+</body>
+</html>
