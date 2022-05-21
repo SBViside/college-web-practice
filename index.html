@@ -91,6 +91,65 @@
                         </div>
 
                     </div>
+
+                    <!-- меню бургер для телефонов -->
+                    <input id="menu-burger" type="checkbox">
+                    <label class="item-with-icon" for="menu-burger">
+                        <img class="item-icon" src="svg/burger_catalogue_list_menu_icon.svg" alt="X">
+                        <span class="item-text">Меню</span>
+                    </label>
+
+                </div>
+            </div>
+            <!-- 3 строка шапки -->
+            <div class="header__row3">
+                <div class="container">
+                    <div class="h-row__content">
+                        <nav class="header__navigator">
+                            <!-- навигатор по страницам -->
+                            <ul class="navigator__list">
+
+                                <!-- ссылки навигатора -->
+                                <li class="navigator__link">
+                                    <a href="#">
+                                        <input id="main-page" name="pages" type="radio" checked>
+                                        <label class="nav-btn" for="main-page">
+                                            <span class="nav-btn__text">Главная</span>
+                                            <div class="nav-btn__underline"></div>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="navigator__link">
+                                    <a href="#">
+                                        <input id="computer-page" name="pages" type="radio">
+                                        <label class="nav-btn" for="computer-page">
+                                            <span class="nav-btn__text">Компьютеры</span>
+                                            <div class="nav-btn__underline"></div>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="navigator__link">
+                                    <a href="#">
+                                        <input id="laptop-page" name="pages" type="radio">
+                                        <label class="nav-btn" for="laptop-page">
+                                            <span class="nav-btn__text">Ноутбуки</span>
+                                            <div class="nav-btn__underline"></div>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="navigator__link">
+                                    <a href="#">
+                                        <input id="other-page" name="pages" type="radio">
+                                        <label class="nav-btn" for="other-page">
+                                            <span class="nav-btn__text">Аксессуары</span>
+                                            <div class="nav-btn__underline"></div>
+                                        </label>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </header>
@@ -107,5 +166,8 @@
 
     </div>
     
+
+    <!-- подключение скриптов -->
+    <script src="js/main.js"></script>
 </body>
 </html>
