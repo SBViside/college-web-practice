@@ -70,6 +70,11 @@
         height: 20px;
     }
 
+/* загаловки */
+    .hder {
+        font-size: 30px;
+        font-weight: 700;
+    }
 
 
 /* ШАПКА */
@@ -234,7 +239,6 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         }
         .block-content {
             margin: 25px;
-            height: 100%;
 
             position: absolute;
             top: 0;
@@ -275,6 +279,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
             top: 50%;
             left: 50%;
 
+            user-select: none;
             transform: translate(-50%);
             transition: all 0.2s ease;
         }
@@ -316,10 +321,10 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         width: 200px;
         height: 100vh;
 
-        position: absolute;
+        position: fixed;
         top: 0;
         left: -100%;
-        z-index: 20;
+        z-index: 100;
 
         display: flex;
         flex-direction: column;
@@ -334,7 +339,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         width: 100%; 
         height: 100vh;
 
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 10;
@@ -343,7 +348,9 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     }
     .burger-select { left: 0; }
     .navigator__list * { color: #ffffff; }
+    .header__row3 { padding: 0; }
+    .header__navigator { margin: 0; }
 
-    .page__categories { padding: 0; }
+    /* категории товаров */
     .category-block { width: 100%; }
 }
