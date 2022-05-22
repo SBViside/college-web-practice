@@ -189,7 +189,95 @@ label[for='menu-burger']
 }
 label[for='menu-burger'] .item-text { font-size: 14px; }
 
-        
+
+
+
+/* ГЛАВНАЯ СТРАНИЦА */
+/* ГЛАВНАЯ СТРАНИЦА */
+/* ГЛАВНАЯ СТРАНИЦА */
+.page {  }
+
+    /* категории товаров */
+    .page__categories {
+        padding: 30px 0 15px;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    /* блок категории */
+        .category-block {
+            margin-bottom: 15px;
+            width: 32%;
+
+            position: relative;
+            top: 0;
+
+            background-color: #e5e8ee;
+            overflow: hidden;
+        }
+        .category-block:hover .block-img { transform: translate(-50%) scale(1.1); }
+        .category-block::before {
+            content: '';
+            width: 300px;
+            height: 400px;
+
+            position: absolute;
+            top: 0;
+            left: -200px;
+            z-index: 1;
+
+            transform: skew(-45deg);
+            background-color: #d20020e2;
+        }
+        .block-content {
+            margin: 25px;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .block-text {
+            margin-bottom: 10px;
+
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .block-ref {
+            position: relative;
+            top: 0;
+
+            font-size: 16px;
+            color: #ffffff;
+        }
+        .block-ref::after {
+            content: url('../svg/arrow_next_right_icon.svg');
+
+            width: 15px;
+            height: 15px;
+
+            position: absolute;
+            right: -25px;
+            top: 50%;
+
+            transform: translateY(-48%);
+        }
+        .block-ref:hover { text-decoration: underline; }
+        .block-img {
+            height: 200px;
+
+            position: relative;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%);
+            transition: all 0.2s ease;
+        }
 
 
 
@@ -204,6 +292,8 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
 @media (max-width:992px) {
     .container { max-width: 750px; }
     .header__searchbar { width: 40%; }
+    
+    .category-block { width: 49%; }
 }
 @media (max-width:767px) {
     .container { max-width: none; }
@@ -253,4 +343,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     }
     .burger-select { left: 0; }
     .navigator__list * { color: #ffffff; }
+
+    .page__categories { padding: 0; }
+    .category-block { width: 100%; }
 }
