@@ -72,6 +72,7 @@
 
 /* загаловки */
     .hder {
+        margin-bottom: 15px;
         font-size: 30px;
         font-weight: 700;
     }
@@ -284,7 +285,154 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
             transition: all 0.2s ease;
         }
 
+    /* блок популярного товара */
+    .popular-block {
+        margin: 15px 10px;
+        padding: 20px 10px;
 
+        height: 410px;
+
+        position: relative;
+        z-index: 2000;
+
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid rgb(223, 223, 223);
+        transition: all 0.1s linear;
+    }
+    /* наведение мыши */
+    .popular-block:hover { outline: 4px solid #d2001f; }
+    /* подкатегории */
+        .popular__img {
+            margin: 0 auto 25px;
+            height: 170px;
+            cursor: pointer;
+        }
+        .popular__category {
+            margin-bottom: 10px;
+            color: gray;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        .popular__name {
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .popular__price {
+            color: #d2001f;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .popular__line {
+            margin: 10px auto 15px;
+            
+            width: 80%;
+            height: 1px;
+
+            background-color: rgb(226, 226, 226);
+        }
+        .popular__buttons {
+            margin: 0 auto;
+            width: 50%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .popular__buttons > * {
+            padding: 7px;
+
+            background-color: #ffffff;
+            transition: all 0.15s linear;
+        }
+        .popular__buttons > *:hover {
+            background-color: rgb(226, 226, 226);
+            border-radius: 50%;
+        }
+        .popular__buttons > *:active {
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+        }
+        .popular__buttons img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+/* в корзину (кнопка) */
+    #to-cart {
+        padding: 0 10px;
+        margin: 10px auto 0;
+        height: 30px;
+        width: 142px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+
+        background-color: #ff3755;
+        outline: 2px solid #ff3755;
+        border-radius: 5px;
+        transition: all 0.15s linear;
+    }
+    #to-cart:hover {
+        width: 160px;
+        justify-content: space-between;
+        color: #d2001f;
+        background-color: #ffffff;
+    }
+    #to-cart img { 
+        width: 20px;
+        height: 20px;
+
+        display: none;  
+    }
+    #to-cart:hover img {  display: block; }
+
+/* кнопки навигации популярных товаров */
+    .slick-button {
+        position: relative;
+        color: #d2001f;
+        background: transparent;
+        user-select: none;
+    }        
+    .slick-button:hover { text-decoration: underline; }        
+    .slick-button:first-child { margin-right: 10px; }        
+    .slick-button:last-child { margin-left: 10px; }        
+    .slick-prev::before {
+        content: url('../svg/arrow_next_right_icon\(red).svg');
+        
+        width: 15px;
+        height: 15px;
+
+        position: absolute;
+        left: -20px;
+        top: 60%;
+
+        transform: translateY(-50%) rotate(180deg);
+    }
+    .slick-next::after {
+        content: url('../svg/arrow_next_right_icon\(red).svg');
+        
+        width: 15px;
+        height: 15px;
+
+        position: absolute;
+        right: -20px;
+        top: 50%;
+
+        transform: translateY(-50%);
+    }
+    .slider-arrows {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 
 
@@ -293,6 +441,9 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
 /* медиа-запросы */
 @media (max-width:1200px) {
     .container { max-width: 970px; }
+
+    .popular__img { height: 140px; }
+    .popular-block { height: 380px; }
 }
 @media (max-width:992px) {
     .container { max-width: 750px; }
@@ -353,4 +504,8 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
 
     /* категории товаров */
     .category-block { width: 100%; }
+
+    /* популярные товары */
+    .popular__img { height: 170px; }
+    .popular-block { height: 410px; }
 }
