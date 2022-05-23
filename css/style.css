@@ -2,6 +2,7 @@
 .red { color: #d2001f !important; }
 .white { color: #ffffff !important; }
 .dn { display: none; }
+.bold { font-weight: 700; }
 
 /* контейнер для всего контента */
     .container {
@@ -433,6 +434,91 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         align-items: center;
     }
 
+/* блок подписки на рассылку */
+    .page__subscribe {
+        margin: 20px 0;
+        padding: 40px 0;
+
+        position: relative;
+        top: 0;
+    }
+    /* плавающая иконка */
+    .bg-icon {
+        width: 200px;
+        position: absolute;
+        top: 10px;
+        max-left: 100px;
+        z-index: -1;
+        transform: rotate(-25deg);
+    }
+    .page__subscribe h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .subscribe__enter-email {
+        margin:30px auto 0;
+        max-width: 500px;
+
+        display: flex;
+        justify-content: space-between;
+
+        border-radius: 10px;
+        border: 1px solid #d2001f;
+        overflow: hidden;
+    }
+    #email-input {
+        padding: 10px;
+        width: 100%;
+        font-size: 16px;
+    }
+    #subscribe {
+        padding: 10px;
+        color: #ffffff;
+        font-weight: 700;
+        background-color: #ff3755;
+    }
+
+
+
+
+
+
+/* ПОДВАЛ */
+/* ПОДВАЛ */
+/* ПОДВАЛ */
+.footer {  }
+    /* первая строка */
+    .footer__row1 {
+        background-color: #181924;
+        border-top: 3px solid #d2001f;
+    }
+    .block-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .info-block {
+        margin-right: 40px;
+        width: 250px;
+    }
+    .info-block h1 {
+        margin: 50px 0 25px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .info-block * { color: #d2d2d2; }
+    .info-block > * {
+        margin: 10px 0;
+    }
+    .item-with-icon {
+    }
+    .item-icon {
+    }
+    .item-text {
+    }
+    .link-list {
+    }
+    .footer__link {
+    }
 
 
 
@@ -516,6 +602,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
 }
 @media (max-width:400px) {
     .hder { font-size: 24px; }
+    .page__subscribe h1 { font-size: 24px; }
 }
 
 
