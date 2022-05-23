@@ -12,6 +12,7 @@
     <!-- slick -->
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/banner.css">
 </head>
 <body>
 
@@ -194,7 +195,7 @@
                 </div>
 
                 <!-- популярные товары -->
-                <div class="page_populars">
+                <div class="page__populars">
                     <!-- заголовок -->
                     <h1 class="hder">Популярные товары</h1>
                     <!-- контейнер товаров -->
@@ -268,7 +269,7 @@
                         <div class="popular-block">
                             <img class="popular__img" src="img/lenovoLegion.png" alt="X">
                             <p class="popular__category">Ноутбуки</p>
-                            <h2 class="popular__name">LENOVO LEGION GAMING</h2>
+                            <h2 class="popular__name">LENOVO GAMING</h2>
                             <h1 class="popular__price">$950</h1>
                             <div class="popular__line"></div>
                             <div class="popular__buttons">
@@ -332,7 +333,7 @@
                         <div class="popular-block">
                             <img class="popular__img" src="img/g102.png" alt="X">
                             <p class="popular__category">Аксессуары</p>
-                            <h2 class="popular__name">LOGITECH G102 PRODIGY</h2>
+                            <h2 class="popular__name">LOGITECH G102</h2>
                             <h1 class="popular__price">$40</h1>
                             <div class="popular__line"></div>
                             <div class="popular__buttons">
@@ -412,9 +413,35 @@
                         
 
                     </div>
-
+                    <div class="slider-arrows"></div>
                 </div>
-                <div class="slider-arrows"></div>
+
+                <!-- баннер с остатком времени -->
+                <article class="page__banner">
+                        <!-- баннер -->
+                        <div class="banner__container">
+                            <h1 class="hder banner__text">До конца скидок:</h1>
+                            <div class="banner__timer">
+                                <div class="timer__block">                                
+                                    <div id="days" class="timer__value">0</div>
+                                    <span class="timer__type hder">дней</span>
+                                </div>
+                                <div class="timer__block">                                
+                                    <div id="hours" class="timer__value">0</div>
+                                    <span class="timer__type hder">часов</span>
+                                </div>
+                                <div class="timer__block">                                
+                                    <div id="minutes" class="timer__value">0</div>
+                                    <span class="timer__type hder">минут</span>
+                                </div>
+                                <div class="timer__block">                                
+                                    <div id="seconds" class="timer__value">0</div>
+                                    <span class="timer__type hder">секунд</span>
+                                </div>
+                            </div>
+                        </div>
+                </article>
+
 
             </div>
         </main>
@@ -436,5 +463,6 @@
     <!-- my scripts -->
     <script src="js/main.js"></script>
     <script src="js/slick-settings.js"></script>
+    <script src="js/bannerTime.js"></script>
 </body>
 </html>

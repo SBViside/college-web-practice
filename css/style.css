@@ -318,6 +318,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
             margin-bottom: 15px;
             font-size: 16px;
             font-weight: 700;
+            bottom: 1px solid black;
         }
         .popular__price {
             color: #d2001f;
@@ -405,19 +406,18 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     .slick-button:first-child { margin-right: 10px; }        
     .slick-button:last-child { margin-left: 10px; }        
     .slick-prev::before {
-        content: url('../svg/arrow_next_right_icon\(red).svg');
+        content: url('../svg/arrow_next_right_icon(red).svg');
         
         width: 15px;
         height: 15px;
 
         position: absolute;
         left: -20px;
-        top: 60%;
-
-        transform: translateY(-50%) rotate(180deg);
+        top: 50%;
+        transform: translateY(-50%) rotateY(180deg);
     }
     .slick-next::after {
-        content: url('../svg/arrow_next_right_icon\(red).svg');
+        content: url('../svg/arrow_next_right_icon(red).svg');
         
         width: 15px;
         height: 15px;
@@ -425,7 +425,6 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         position: absolute;
         right: -20px;
         top: 50%;
-
         transform: translateY(-50%);
     }
     .slider-arrows {
@@ -450,6 +449,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     .header__searchbar { width: 40%; }
     
     .category-block { width: 49%; }
+
 }
 @media (max-width:767px) {
     .container { max-width: none; }
@@ -509,3 +509,13 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     .popular__img { height: 170px; }
     .popular-block { height: 410px; }
 }
+@media (max-width:570px) {
+    /* убираем минуты и секунды на баннере */
+    .timer__block:nth-child(4){ display: none;  }
+    .timer__block:nth-child(3){ display: none;  }
+}
+@media (max-width:400px) {
+    .hder { font-size: 24px; }
+}
+
+
