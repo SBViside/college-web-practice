@@ -17,8 +17,8 @@
 
     // анимация объектов при скролле
     const windowHeight = document.documentElement.clientHeight;
-    // собираю массив коллекцию всех объектов, для которых нужно применить анимацию
-    const blocks = document.querySelectorAll('.page__banner, .page__subscribe, .page__populars');
+    // массив коллекцию всех объектов, для которых нужно применить анимацию
+    const blocks = document.querySelectorAll('.page__banner, .page__subscribe, .page__populars, .category-block');
 
     window.addEventListener('load', loadBlocks);
     window.addEventListener('scroll', loadBlocks);
@@ -28,7 +28,9 @@
         for (let block of blocks) {
             let blockRect = block.getBoundingClientRect();
             let height =  blockRect.top - windowHeight;
-            if (height <= 0) block.classList.add('active');
+            if (height <= 0)  {
+                block.classList.add('active');
+            }
         }
     }
 })();
