@@ -15,6 +15,8 @@
         burgerButton.click();
     });
 
+
+
     // анимация объектов при скролле
     const windowHeight = document.documentElement.clientHeight;
     // массив коллекцию всех объектов, для которых нужно применить анимацию
@@ -23,6 +25,7 @@
     window.addEventListener('load', loadBlocks);
     window.addEventListener('scroll', loadBlocks);
 
+    // метод загрузки блоков
     function loadBlocks() {
         if (blocks.length <= 0) return;
         for (let block of blocks) {
@@ -32,5 +35,26 @@
                 block.classList.add('active');
             }
         }
+    }
+
+
+    // закрытие обозревателя
+    const viewerButton = document.getElementById('close-button');
+    const viewer = viewerButton.parentElement.parentElement;
+    viewerButton.addEventListener('click', function() { 
+        viewer.classList.add('dn');
+        viewer.lastElementChild.src = 'svg/close_delete_exit_remove_icon.svg';
+    });
+
+
+
+    // бинд кнопок обозревания товара
+    const viewButtons = document.getElementsByClassName('popular__view');
+    for (let butt of viewButtons) {
+        butt.addEventListener('click', function() {
+            let imagePath = butt.parentElement.parentElement.firstElementChild.src;
+            viewer.classList.remove('dn');
+            viewer.lastElementChild.lastElementChild.src = imagePath;
+        });
     }
 })();

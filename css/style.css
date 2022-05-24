@@ -1,7 +1,7 @@
 * { font-family: Montserrat; }
 .red { color: #d2001f !important; }
 .white { color: #ffffff !important; }
-.dn { display: none; }
+.dn { display: none !important; }
 .bold { font-weight: 700; }
 
 /* контейнер для всего контента */
@@ -539,6 +539,51 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     }
 
 
+/* обозреватель товаров */
+.absolute-viewer {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 100;
+    background-color: #3f3f3f72;
+}
+.viewer__content {
+    height: 80%;
+    width: 50%;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    user-select: none;  
+}
+    /* внутренности */
+    #close-button {
+        padding: 3px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        background-color: #d2001f;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+    }
+    #close-button:hover { background-color: rgb(255, 28, 62); }
+    #close-button img { width: 20px; height: 20px; }
+    .absolute-viewer img { max-width: 90%; max-height: 90%; }
+
 
 /* для корректных анимаций */
 .header { overflow: hidden; }
@@ -552,6 +597,9 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
 
     .popular__img { height: 140px; }
     .popular-block { height: 380px; }
+
+    /* ширина обозревателя */
+    .viewer__content { width: 60%; }
 }
 @media (max-width:992px) {
     .container { max-width: 750px; }
@@ -559,6 +607,8 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     
     .category-block { width: 49%; }
 
+    /* ширина обозревателя */
+    .viewer__content { width: 70%; }
 }
 @media (max-width:767px) {
     .container { max-width: none; }
@@ -617,6 +667,9 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     /* популярные товары */
     .popular__img { height: 170px; }
     .popular-block { height: 410px; }
+
+    /* ширина обозревателя */
+    .viewer__content { width: 90%; }
 }
 @media (max-width:570px) {
     /* убираем минуты и секунды на баннере */
