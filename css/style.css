@@ -286,6 +286,13 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
             transition: all 0.2s ease;
         }
 
+    /* популярные товары */
+    .page__populars {
+        /* не активен */
+        transform: translateY(80px);
+        opacity: 0;
+        transition: all 1s ease;
+    }
     /* блок популярного товара */
     .popular-block {
         margin: 15px 10px;
@@ -434,6 +441,14 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         align-items: center;
     }
 
+/* баннер */
+.page__banner {
+    /* не активен */
+    transform: translateX(80px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
 /* блок подписки на рассылку */
     .page__subscribe {
         margin: 20px 0;
@@ -441,6 +456,11 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
 
         position: relative;
         top: 0;
+
+        /* не активен */
+        transform: translateX(-80px);
+        opacity: 0;
+        transition: all 1s ease;
     }
     /* плавающая иконка */
     .bg-icon {
@@ -538,6 +558,15 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         text-align: center;
     }
 
+
+
+
+
+    /* активный элемент */
+    .active {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
 
 

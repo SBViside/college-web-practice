@@ -14,4 +14,21 @@
     navBackground.addEventListener('click', function() {
         burgerButton.click();
     });
+
+    // анимация объектов при скролле
+    const windowHeight = document.documentElement.clientHeight;
+    // собираю массив коллекцию всех объектов, для которых нужно применить анимацию
+    const blocks = document.querySelectorAll('.page__banner, .page__subscribe, .page__populars');
+
+    window.addEventListener('load', loadBlocks);
+    window.addEventListener('scroll', loadBlocks);
+
+    function loadBlocks() {
+        if (blocks.length <= 0) return;
+        for (let block of blocks) {
+            let blockRect = block.getBoundingClientRect();
+            let height =  blockRect.top - windowHeight;
+            if (height <= 0) block.classList.add('active');
+        }
+    }
 })();
