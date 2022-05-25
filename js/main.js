@@ -16,11 +16,10 @@
     });
 
 
-
     // анимация объектов при скролле
     const windowHeight = document.documentElement.clientHeight;
     // массив коллекцию всех объектов, для которых нужно применить анимацию
-    const blocks = document.querySelectorAll('.page__banner, .page__subscribe, .page__populars, .category-block');
+    const blocks = document.querySelectorAll('.page__banner, .page__subscribe, .page__populars, .category-block, .page__populars_2');
 
     window.addEventListener('load', loadBlocks);
     window.addEventListener('scroll', loadBlocks);
@@ -37,7 +36,6 @@
         }
     }
 
-
     // закрытие обозревателя
     const viewerButton = document.getElementById('close-button');
     const viewer = viewerButton.parentElement.parentElement;
@@ -45,7 +43,6 @@
         viewer.classList.add('dn');
         viewer.lastElementChild.src = 'svg/close_delete_exit_remove_icon.svg';
     });
-
 
 
     // бинд кнопок обозревания товара
