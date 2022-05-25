@@ -187,8 +187,7 @@
 
 /* меню бургер */
 #menu-burger { display: none; }
-label[for='menu-burger'] 
-{ 
+label[for='menu-burger'] { 
     display: none; 
     position: absolute;
     right: 20px;
@@ -309,7 +308,6 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
             margin: 0 auto 25px;
             height: 170px;
             max-width: 100%;
-            cursor: pointer;
         }
         .popular__category {
             margin-bottom: 10px;
@@ -319,9 +317,12 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         }
         .popular__name {
             margin-bottom: 15px;
+            display: block;
+
+            color: #000000;
             font-size: 16px;
             font-weight: 700;
-            bottom: 1px solid black;
+            cursor: pointer;
         }
         .popular__price {
             color: #d2001f;
@@ -442,12 +443,13 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     }
 
 /* блок подписки на рассылку */
-    .page__subscribe {
-        margin: 20px 0;
+    .subscribe {
+        margin: 50px 0 20px;
         padding: 40px 0;
 
         position: relative;
         top: 0;
+        border-top: 2px solid #90909033;
     }
     /* плавающая иконка */
     .bg-icon {
@@ -458,7 +460,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         z-index: -1;
         transform: rotate(-25deg);
     }
-    .page__subscribe h1 {
+    .subscribe h1 {
         font-size: 30px;
         text-align: center;
     }
@@ -685,7 +687,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
 }
 @media (max-width:400px) {
     .hder { font-size: 24px; }
-    .page__subscribe h1 { font-size: 24px; }
+    .subscribe h1 { font-size: 24px; }
 }
 
 

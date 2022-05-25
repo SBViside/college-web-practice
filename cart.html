@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="svg/logo-01.svg" type="image/svg">
+    <title>CPUX - корзина</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
+    <link rel="stylesheet" href="css/normal.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- оболочка -->
+    <div class="wrapper">
+
+        <!-- шапка -->
+        <header class="header">
+            <!-- 1 строка шапки -->
+            <div class="header__row1">
+                <div class="container">
+                    <div class="h-row__content">
+
+                        <!-- контакты -->
+                        <div class="header__contacts">
+                            <!-- объекты с иконками -->
+                            <a href="#" class="item-with-icon">
+                                <img class="item-icon" src="svg/local_phone_icon.svg" alt="X">
+                                <span class="item-text">+44-729-84-01</span>
+                            </a>
+
+                            <a href="#" class="item-with-icon">
+                                <img class="item-icon" src="svg/email_letter_mail_icon.svg" alt="X">
+                                <span class="item-text">ohvatukj@gmail.com</span>
+                            </a>
+
+                            <a href="#" class="item-with-icon">
+                                <img class="item-icon" src="svg/location_map_pin_gps_icon.svg" alt="X">
+                                <span class="item-text">г. Минск</span>
+                            </a>
+                        </div>
+
+                        <!-- личный кабинет -->
+                        <div class="header__user">
+                            <!-- объекты с иконками -->
+                            <a href="#" id="currency" class="item-with-icon">
+                                <img class="item-icon" src="svg/dollar_finance_money_icon.svg" alt="X">
+                                <span class="item-text">USD</span>
+                            </a>
+
+                            <a href="#" class="item-with-icon">
+                                <img class="item-icon" src="svg/user_users_icon.svg" alt="X">
+                                <span class="item-text">Мой аккаунт</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 2 строка шапки -->
+            <div class="header__row2">
+                <div class="container">
+                    <div class="h-row__content">
+
+                        <!-- логотип -->
+                        <a href="index.html" class="logo">XCPU<span class="red">.</span>BY</a>
+                        <!-- строка поиска (на флексе) -->
+                        <div class="header__searchbar">
+                            <select id="search-category" name="category">
+                                <option value="all" selected>Все</option>
+                                <option value="computers">Компьютеры</option>
+                                <option value="laptops">Ноутбуки</option>
+                                <option value="other">Аксессуары</option>
+                            </select>
+                            <input id="search-text" type="text" placeholder="Поиск по каталогу">
+                            <button id="search-button">Поиск</button>
+                        </div>
+                        <!-- список желаний и корзина -->
+                        <div class="header__wc">
+                            <a id="wishlist" class="btn-logo">
+                                <div class="btn-counter"><span>0</span></div>
+                                <img class="item-icon" src="svg/heart_like_likes_love_icon.svg" alt="X">
+                                <span class="item-text">Избранные</span>
+                            </a>
+                            <a href="cart.html" id="cart" class="btn-logo">
+                                <div class="btn-counter"><span>0</span></div>
+                                <img class="item-icon" src="svg/cart_shopping_ic_icon.svg" alt="X">
+                                <span class="item-text">Корзина</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- меню бургер для телефонов -->
+                    <input id="menu-burger" type="checkbox">
+                    <label class="item-with-icon" for="menu-burger">
+                        <img class="item-icon" src="svg/burger_catalogue_list_menu_icon.svg" alt="X">
+                        <span class="item-text">Меню</span>
+                    </label>
+
+                </div>
+            </div>
+            <!-- 3 строка шапки -->
+            <div class="header__row3">
+                <div class="container">
+                    <div class="h-row__content">
+                        <nav class="header__navigator">
+                            <!-- навигатор по страницам -->
+                            <ul class="navigator__list">
+
+                                <!-- ссылки навигатора -->
+                                <li class="navigator__link">
+                                    <a href="index.html" onclick="document.open('index.html')">
+                                        <input id="main-page" name="pages" type="radio">
+                                        <label class="nav-btn" for="main-page">
+                                            <span class="nav-btn__text">Главная</span>
+                                            <div class="nav-btn__underline"></div>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="navigator__link">
+                                    <a href="#">
+                                        <input id="computer-page" name="pages" type="radio">
+                                        <label class="nav-btn" for="computer-page">
+                                            <span class="nav-btn__text">Компьютеры</span>
+                                            <div class="nav-btn__underline"></div>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="navigator__link">
+                                    <a href="#">
+                                        <input id="laptop-page" name="pages" type="radio">
+                                        <label class="nav-btn" for="laptop-page">
+                                            <span class="nav-btn__text">Ноутбуки</span>
+                                            <div class="nav-btn__underline"></div>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="navigator__link">
+                                    <a href="#">
+                                        <input id="other-page" name="pages" type="radio">
+                                        <label class="nav-btn" for="other-page">
+                                            <span class="nav-btn__text">Аксессуары</span>
+                                            <div class="nav-btn__underline"></div>
+                                        </label>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                        <div class="navigator-area dn"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- страница -->
+        <main class="page">
+            <div class="container">
+
+               
+
+            </div>
+        </main>
+
+
+        <!-- подписка на рассылку -->
+        <article class="subscribe">
+            <div class="container animation-left">
+                <img src="svg/email_letter_mail_icon(gray)y.svg" alt="X" class="bg-icon">
+                <h1>Подписаться на <span class="bold">РАССЫЛКУ</span></h1>
+                <div class="subscribe__enter-email">
+                    <input id="email-input" type="text" placeholder="Ваш E-Mail">
+                    <button id="subscribe">Подписаться</button>
+                </div>
+                <div class="socials__container">
+                    <a class="square-icon-block" href="https://vk.com/" target="_blank"> <img src="svg/socials/vk_vkontakte_icon.svg" alt="X"> </a>
+                    <a class="square-icon-block" href="https://www.instagram.com/" target="_blank"> <img src="svg/socials/instagram_photo_icon.svg" alt="X"> </a>
+                    <a class="square-icon-block" href="https://www.tiktok.com" target="_blank"> <img src="svg/socials/tiktok_icon.svg" alt="X"> </a>
+                    <a class="square-icon-block" href="https://twitter.com/" target="_blank"> <img src="svg/socials/twitter_icon.svg" alt="X"> </a>
+                </div>
+            </div>
+        </article>
+        <!-- подвал -->
+        <footer class="footer">
+
+                <!-- первая строка подвала -->
+                <div class="footer__row1">
+                    <div class="container">
+                        <!-- контейнер блоков информации -->
+                        <ul class="block-list">
+                            <li class="info-block">
+                                <h1>О нас</h1>
+                                <p>Находимся на рынке уже более 7 лет. Скорость и качество - наши главные особенности.</p>
+                                <!-- объекты с иконками -->
+                                <a href="#" class="item-with-icon">
+                                    <img class="item-icon" src="svg/local_phone_icon.svg" alt="X">
+                                    <span class="item-text">+44-729-84-01</span>
+                                </a>
+
+                                <a href="#"  class="item-with-icon">
+                                    <img class="item-icon" src="svg/email_letter_mail_icon.svg" alt="X">
+                                    <span class="item-text">ohvatukj@gmail.com</span>
+                                </a>
+
+                                <a href="#"  class="item-with-icon">
+                                    <img class="item-icon" src="svg/location_map_pin_gps_icon.svg" alt="X">
+                                    <span class="item-text">г. Минск</span>
+                                </a>
+                            </li>
+                            <li class="info-block">
+                                <h1>Категории</h1>
+                                <ul class="link-list">
+                                    <li class="footer__link"><a href="index.html">Главная</a></li>
+                                    <li class="footer__link"><a href="#">Компьютеры</a></li>
+                                    <li class="footer__link"><a href="#">Ноутбуки</a></li>
+                                    <li class="footer__link"><a href="#">Аксессуары</a></li>
+                                </ul>
+                            </li>
+                            <li class="info-block">
+                                <h1>Информация</h1>
+                                <ul class="link-list">
+                                    <li class="footer__link"><a href="#">О нас</a></li>
+                                    <li class="footer__link"><a href="#">Контакты</a></li>
+                                    <li class="footer__link"><a href="#">Политика</a></li>
+                                    <li class="footer__link"><a href="#">Награды</a></li>
+                                </ul>
+                            </li>
+                            <li class="info-block">
+                                <h1>Сервис</h1>
+                                <ul class="link-list">
+                                    <li class="footer__link"><a href="#">Мой аккаунт</a></li>
+                                    <li class="footer__link"><a href="cart.html">Корзина</a></li>
+                                    <li class="footer__link"><a href="#">Избранные</a></li>
+                                    <li class="footer__link"><a href="#">Помощь</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- вторая строка подвала -->
+                <div class="footer__row2">
+                    <div class="container">
+                        <p>Copyright ©2022 All rights reserved | This template is made by Ohvatuk Zhenya</p>
+                    </div>
+                </div>
+        </footer>
+    </div>
+
+
+    <!-- подключение скриптов -->
+    <!-- мои скрипты -->
+    <script src="js/main.js"></script>
+    <script src="js/everyPage/cartPageScript.js"></script>
+</body>
+</html>

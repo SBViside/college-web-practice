@@ -1,0 +1,2 @@
+setBurgerMenu();
+setScrollAnimations('.subscribe .container');

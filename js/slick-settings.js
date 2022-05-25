@@ -1,7 +1,4 @@
-'use strict'
-
 // slick using JQUERY
-
 function setAnimation(blocksAmount) {
   $('.populars__container').slick({
     slidesToShow: blocksAmount,
