@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
     <link rel="stylesheet" href="css/normal.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
@@ -161,7 +162,87 @@
         <main class="page">
             <div class="container">
 
-               
+                <!-- контейнер блоков -->
+               <div class="data__container">
+
+                <!-- блок ввода информации -->
+                    <div class="enter-data">
+                        <h1 class="hder">Ваши данные</h1>
+                        <div class="data-input animation-left">
+                            <div class="text-with-input">
+                                <span>Фамилия</span>
+                                <input id="surname" class="text-input" type="text" placeholder="Фамилия">
+                            </div>
+                            <div class="text-with-input">
+                                <span>Имя</span>
+                                <input id="name" class="text-input" type="text" placeholder="Имя">
+                            </div>
+                            <div class="text-with-input">
+                                <span>Эл.почта</span>
+                                <input id="mail" class="text-input" type="text" placeholder="E-Mail">
+                            </div>
+                            <div class="text-with-input">
+                                <span>Телефон</span>
+                                <input id="phone" class="text-input" type="text" placeholder="Телефон">
+                            </div>
+                            <div class="text-with-input">
+                                <span>Город</span>
+                                <input id="city" class="text-input" type="text" placeholder="Город">
+                            </div>
+                            <div class="text-with-input">
+                                <span>Адрес</span>
+                                <input id="address" class="text-input" type="text" placeholder="Адрес">
+                            </div>
+                            
+                            <!-- ввод пароля -->
+                            <div class="enter-password">
+                                <p>Для подтверждения заказа, введите свой пароль ниже.</p>
+                                <input id="password" class="text-input" type="password" placeholder="Ваш пароль">
+                            </div>
+
+                        </div>
+
+                        <h1 class="hder">Дополнительные данные</h1>
+                        <textarea class="text-input" id="information" placeholder="Дополнительная информация (необязательно)"></textarea>
+                    </div>
+
+                <!-- блок заказа -->
+                    <div class="place-order animation-bottom">
+                        <h1 class="hder">Ваш заказ</h1>
+                        <table class="order-table">
+                            <tr>
+                                <td class="bold">Продукт</td>
+                                <td class="bold">Стоимость</td>
+                            </tr>
+
+                            <!-- список товаров в корзине -->
+                            <tr id="order-item">
+                                <td>Название товара</td>
+                                <td>$980.00</td>
+                            </tr>
+                            <tr id="order-item">
+                                <td>Название товара</td>
+                                <td>$980.00</td>
+                            </tr>
+
+                            <!-- доставка -->
+                            <tr>
+                                <td>Доставка</td>
+                                <td class="bold">Бесплатно</td>
+                            </tr>
+
+                            <!-- итог -->
+                            <tr>
+                                <td class="bold">Всего</td>
+                                <td class="total-price red bold">$1960.00</td>
+                            </tr>
+                        </table>
+                        <h3>Оплата:</h3>
+
+                    </div>
+
+
+               </div>
 
             </div>
         </main>
@@ -169,7 +250,7 @@
 
         <!-- подписка на рассылку -->
         <article class="subscribe">
-            <div class="container animation-left">
+            <div class="container animation-bottom">
                 <img src="svg/email_letter_mail_icon(gray)y.svg" alt="X" class="bg-icon">
                 <h1>Подписаться на <span class="bold">РАССЫЛКУ</span></h1>
                 <div class="subscribe__enter-email">

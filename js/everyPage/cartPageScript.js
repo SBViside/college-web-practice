@@ -1,2 +1,2 @@
 setBurgerMenu();
-setScrollAnimations('.subscribe .container');
+setScrollAnimations('.subscribe .container, .data-input, .place-order');
