@@ -69,61 +69,82 @@
         const seconds = document.getElementById('seconds');
         // let secondsWord = seconds.nextElementSibling;
         let timer = new Date(2000, 0, 7, 13, 10, 34);
+        const checkNumber = (number) => number < 10 ? '0'+number : number;
 
         // метод, который выполняется каждую секунду и изменяет время на баннере
         const timeUpdater = setInterval(function() {
             timer.setSeconds(timer.getSeconds() - 1);   
-            const checkNumber = (number) => number < 10 ? '0'+number : number;
-            days.textContent = checkNumber(timer.getDay());
-            hours.textContent = checkNumber(timer.getHours());
-            minutes.textContent = checkNumber(timer.getMinutes());
-            seconds.textContent = checkNumber(timer.getSeconds());
+            if (days !== null && hours !== null && minutes !== null && seconds !== null) {
+                days.textContent = checkNumber(timer.getDay());
+                hours.textContent = checkNumber(timer.getHours());
+                minutes.textContent = checkNumber(timer.getMinutes());
+                seconds.textContent = checkNumber(timer.getSeconds());
+            }
         }, 1000);
     }
 
 
 
-// валюты на сайте
-const CURRENCIES = ['USD', 'EUR', 'RUB'];
-let CURRENCY = sessionStorage.getItem('crr') || CURRENCIES[0];
-const priceBlocks = document.querySelectorAll('.popular__price');
-const currencyChangeButton = document.getElementById('currency');
-updateCurrency(currencyChangeButton);
 
-// методы изменения валюты
-function updateCurrency(button) {
-    switch (CURRENCY) {
-        case 'USD':
-            changePrices('₽', '$', 0.0158730158730159);
-            changeButton(button, 'svg/dollar_finance_money_icon.svg');
-            break;
-        case 'EUR':
-            changePrices('$', '€', 0.9);
-            changeButton(button, 'svg/euro_european_finance_money_icon.svg');
-            break;
-        case 'RUB':
-            changePrices('€', '₽', 70);
-            changeButton(button, 'svg/ruble_sign_icon.svg');
-            break;
-    }
-}
-function changePrices(oldSymbol, newSymbol, coefficient) {
-    for (let price of priceBlocks) {
-        price.innerHTML = price.innerHTML.replace(oldSymbol + ' ', '');
-        let priceNumber = (+price.innerHTML) * coefficient;
-        price.innerHTML = newSymbol + ' ' + priceNumber.toFixed(2);
-    }
-}
-function changeButton(button, imgSrc) {
-    button.querySelector('.item-text').textContent = CURRENCY;
-    button.querySelector('.item-icon').src = imgSrc;
-}    
+// главное тело скрипта
+(function() {
 
-// назначение метода изменения валюты
-currencyChangeButton.addEventListener('click', function() {
-    // изменения переменной
-    CURRENCY = CURRENCIES.indexOf(CURRENCY) >= 2 ? CURRENCIES[0] : CURRENCIES[CURRENCIES.indexOf(CURRENCY) + 1];
-    sessionStorage.setItem('crr', CURRENCY);
-    updateCurrency(this);
-});
+    // валюты на сайте
+    const CURRENCIES = ['USD', 'EUR', 'RUB'];
+    let CURRENCY = sessionStorage.getItem('crr') || CURRENCIES[0];
+    const priceBlocks = document.querySelectorAll('.popular__price');
+    const currencyChangeButton = document.getElementById('currency');
+    setupCurrency();
+
+    // методы изменения валюты
+    function setupCurrency() {
+        if (CURRENCY === CURRENCIES[0]) return;
+        switch (CURRENCY) {
+            case 'EUR':
+                changePrices('$', '€', 0.9);
+                changeButton('svg/euro_european_finance_money_icon.svg');
+                break;
+            case 'RUB':
+                changePrices('$', '₽', 63);
+                changeButton('svg/ruble_sign_icon.svg');
+                break;
+        }
+    }
+    function updateCurrency() {
+        switch (CURRENCY) {
+            case 'USD':
+                changePrices('₽', '$', 0.0158730158730159);
+                changeButton('svg/dollar_finance_money_icon.svg');
+                break;
+            case 'EUR':
+                changePrices('$', '€', 0.9);
+                changeButton('svg/euro_european_finance_money_icon.svg');
+                break;
+            case 'RUB':
+                changePrices('€', '₽', 70);
+                changeButton('svg/ruble_sign_icon.svg');
+                break;
+        }
+    }
+    function changePrices(oldSymbol, newSymbol, coefficient) {
+        for (let price of priceBlocks) {
+            price.innerHTML = price.innerHTML.replace(oldSymbol + ' ', '');
+            let priceNumber = (+price.innerHTML) * coefficient;
+            price.innerHTML = newSymbol + ' ' + priceNumber.toFixed(2);
+        }
+    }
+    function changeButton(imgSrc) {
+        currencyChangeButton.querySelector('.item-text').textContent = CURRENCY;
+        currencyChangeButton.querySelector('.item-icon').src = imgSrc;
+    }    
+
+    // назначение метода изменения валюты
+    currencyChangeButton.addEventListener('click', function() {
+        CURRENCY = CURRENCIES.indexOf(CURRENCY) >= 2 ? CURRENCIES[0] : CURRENCIES[CURRENCIES.indexOf(CURRENCY) + 1];
+        sessionStorage.setItem('crr', CURRENCY);
+        updateCurrency();
+    });
+
+})();
+
 
