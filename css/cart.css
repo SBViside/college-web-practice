@@ -48,9 +48,20 @@
     }
         /* таблица заказа */
         .order-table {
+            padding: 0 15px;
             width: 100%;
         }
         .order-table td:last-child { text-align: right; }
+        .order-table td {
+            padding: 5px 0;
+        }
+        table tr:first-child td {
+            border-bottom: 1px solid black;
+        }
+        table tr:last-child td {
+            font-size: 21px;
+            border-top: 1px solid black;
+        }
 
 
 
@@ -58,4 +69,5 @@
     .data__container { flex-direction: column; align-items: center; }
     .enter-data { width: 100%; }
     .place-order { width: 100%; }
+    .enter-data { margin-bottom: 30px; }
 }
