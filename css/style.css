@@ -456,7 +456,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         width: 200px;
         position: absolute;
         top: 10px;
-        max-left: 100px;
+        left: 100px;
         z-index: -1;
         transform: rotate(-25deg);
     }
