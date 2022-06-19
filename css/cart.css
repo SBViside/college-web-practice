@@ -3,6 +3,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
     /* 1 блок */
     .enter-data {
@@ -22,7 +23,7 @@
 
     .text-with-input {
         padding: 0 20px;
-        margin: 20px 0;
+        margin: 15px 0;
 
         width: 100%;
         display: flex;
@@ -46,12 +47,12 @@
 
     /* 2 блок */
     .place-order {
+        padding: 0 15px;
         width: 35%;
         border: 2px solid #90909033;;
     }
         /* таблица заказа */
         .order-table {
-            padding: 0 15px;
             width: 100%;
         }
         .order-table td:last-child { text-align: right; }
@@ -59,13 +60,67 @@
             padding: 5px 0;
         }
         table tr:first-child td {
-            border-bottom: 1px solid black;
+            /* border-bottom: 1px solid black; */
         }
         table tr:last-child td {
             font-size: 21px;
-            border-top: 1px solid black;
+            /* border-top: 1px solid black; */
         }
 
+    .payments {
+        margin-bottom: 20px;
+        user-select: none;
+    }
+    .payments:first-child { margin-top: 30px; }
+    .payments:last-child { margin-bottom: 0; }
+    .payments input[type='radio'] { display: none; }
+    .payments input[type='radio'] + label {
+        margin-left: 22px;
+        position: relative;
+        font-weight: 500;
+    }
+    .payments input[type='radio'] + label::before {
+        content: '';
+        width: 15px;
+        height: 15px;
+
+        position: absolute;
+        left: -20px;
+        top: 1px;
+        
+        border: 1px solid gray;
+        border-radius: 50%;
+        transition: all 0.15s linear;
+    }
+    .payments input[type='radio']:checked + label::before {
+        border: 5px solid #d2001f;
+        border-radius: 50%;
+    }
+    .payments p {
+        margin-top: 8px;
+        margin-left: 22px;
+        font-size: 12px;
+        color: rgb(137, 137, 137);
+    }
+
+    #placeOrder {
+        margin: 30px 0 15px ;
+        padding: 10px 0;
+        width: 100%;
+
+        color: #FFFFFF;
+        font-weight: 700;
+
+        border-radius: 10px;
+        background-color: #d10024;
+        transition: all 0.1s linear;
+        box-shadow: 0 3px 0px #a3001b;
+    }
+    #placeOrder:hover { background-color: #c00020; }
+    #placeOrder:active {         
+        transform: translateY(3px);
+        box-shadow: 0 0px 0px #a3001b; 
+    }
 
 
 @media (max-width:767px) {

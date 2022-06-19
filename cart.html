@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/animations.css">
+    <!-- подключение скриптов -->
+    <!-- мои скрипты -->
+    <script src="js/main.js" defer></script>
+    <script src="js/everyPage/cartPageScript.js" defer></script>
 </head>
 <body>
 
@@ -227,8 +231,8 @@
 
                             <!-- доставка -->
                             <tr>
-                                <td style="padding-bottom: 35px;">Доставка</td>
-                                <td style="padding-bottom: 35px;" class="bold">Бесплатно</td>
+                                <td style="padding-bottom: 15px;">Доставка</td>
+                                <td style="padding-bottom: 15px;" class="bold">Бесплатно</td>
                             </tr>
 
                             <!-- итог -->
@@ -238,7 +242,31 @@
                             </tr>
                         </table>
                         <!-- <h3>Оплата:</h3> -->
-
+                        <div class="order-payment">
+                            <div class="payments">
+                                <input name="payment" type="radio" id="byCard" checked>
+                                <label for="byCard">
+                                    Банковской картой
+                                    <p>Расчет за товары и услуги используя банковскую карту.</p>
+                                </label>
+                            
+                            </div>
+                            <div class="payments">
+                                <input name="payment" type="radio" id="byCash">
+                                <label for="byCash">
+                                    Наличными
+                                    <p>Расчет за товары и услуги наличными деньгами.</p>
+                                </label>
+                            </div>
+                            <div class="payments">
+                                <input name="payment" type="radio" id="byBtc">
+                                <label for="byBtc">
+                                    Биткоинами
+                                    <p>Электронный платёж между сторонами происходит без посредников и необратим — нет механизма отмены подтверждённой операции.</p>
+                                </label>
+                            </div>
+                        </div>
+                        <button id="placeOrder">Оформить заказ</button>
                     </div>
 
 
@@ -333,9 +361,6 @@
     </div>
 
 
-    <!-- подключение скриптов -->
-    <!-- мои скрипты -->
-    <script src="js/main.js"></script>
-    <script src="js/everyPage/cartPageScript.js"></script>
+
 </body>
 </html>
