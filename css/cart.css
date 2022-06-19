@@ -8,6 +8,9 @@
     .enter-data {
         width: 60%;
     }
+        .enter-data h1 {
+            margin-bottom: 30px;
+        }
         /* поле ввода пароля */
         .enter-password {
             padding:  20px 20px 0 20px;
@@ -19,7 +22,7 @@
 
     .text-with-input {
         padding: 0 20px;
-        margin: 10px 0;
+        margin: 20px 0;
 
         width: 100%;
         display: flex;
