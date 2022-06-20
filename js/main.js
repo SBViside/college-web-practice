@@ -1,4 +1,6 @@
-    // метод установки бургер меню
+    sessionStorage.setItem('cartAmount', 0);
+    
+   // метод установки бургер меню
     function setBurgerMenu() {
         // получение необходимых компонентов для бургер-меню
         const body = document.body;
@@ -81,6 +83,10 @@
                 seconds.textContent = checkNumber(timer.getSeconds());
             }
         }, 1000);
+    }
+
+    function setCartCounter() {  
+        document.querySelector('#cart-counter').textContent = sessionStorage.getItem('cartAmount') ?? 0;
     }
 
 

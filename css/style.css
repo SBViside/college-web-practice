@@ -399,6 +399,15 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
     }
     .to-cart:hover img {  display: block; }
 
+    /* активная кнопка */
+    .to-cart.active {
+        width: 160px;
+        justify-content: space-between;
+        color: #d2001f;
+        background-color: #ffe8e8;
+    }
+    .to-cart.active img { display: block; }
+
 /* кнопки навигации популярных товаров */
     .slick-button {
         position: relative;
