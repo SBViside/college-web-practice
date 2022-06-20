@@ -366,7 +366,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         }
 
 /* в корзину (кнопка) */
-    #to-cart {
+    .to-cart {
         padding: 0 10px;
         margin: 10px auto 0;
         height: 30px;
@@ -385,19 +385,19 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         border-radius: 5px;
         transition: all 0.15s linear;
     }
-    #to-cart:hover {
+    .to-cart:hover {
         width: 160px;
         justify-content: space-between;
         color: #d2001f;
         background-color: #ffffff;
     }
-    #to-cart img { 
+    .to-cart img { 
         width: 20px;
         height: 20px;
 
         display: none;  
     }
-    #to-cart:hover img {  display: block; }
+    .to-cart:hover img {  display: block; }
 
 /* кнопки навигации популярных товаров */
     .slick-button {
