@@ -404,7 +404,7 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         width: 160px;
         justify-content: space-between;
         color: #d2001f;
-        background-color: #ffe8e8;
+        background-color: #fef4f4;
     }
     .to-cart.active img { display: block; }
 

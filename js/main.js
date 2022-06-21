@@ -1,5 +1,7 @@
-    sessionStorage.setItem('cartAmount', 0);
-    
+    sessionStorage.cartAmount = sessionStorage.cartAmount ?? 0;
+    let cart = sessionStorage.cart ?? [];
+    if (typeof cart === 'string') cart = JSON.parse(cart);
+
    // метод установки бургер меню
     function setBurgerMenu() {
         // получение необходимых компонентов для бургер-меню
@@ -56,6 +58,42 @@
                 let imagePath = butt.parentElement.parentElement.firstElementChild.src;
                 viewer.classList.remove('dn');
                 viewer.lastElementChild.lastElementChild.src = imagePath;
+            });
+        }
+    }
+
+    function setBuyButtons() {
+        const toCartButtons = document.querySelectorAll('.to-cart');
+
+        for (let butt of toCartButtons) {
+            for (let product of cart) {
+                if (product.includes(butt.parentElement.children[2].textContent)) {
+                    butt.classList.add('active');
+                    butt.lastChild.textContent = 'В КОРЗИНЕ';
+                }
+            }
+            
+            butt.addEventListener('click', function() { 
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                    this.lastChild.textContent = 'В КОРЗИНУ';
+                    sessionStorage.cartAmount = +sessionStorage.cartAmount - 1;
+
+                    for (let i = 0; i < cart.length; i++)
+                        if (cart[i].includes(this.parentElement.children[2].textContent)) {
+                            cart.splice(i, 1);
+                            break;
+                    }
+                    sessionStorage.cart = JSON.stringify(cart);
+                } else {
+                    this.classList.add('active');
+                    this.lastChild.textContent = 'В КОРЗИНЕ';
+                    sessionStorage.cartAmount = +sessionStorage.cartAmount + 1;
+
+                    cart.push(`${this.parentElement.children[2].textContent}' '${this.parentElement.children[3].textContent}`);
+                    sessionStorage.cart = JSON.stringify(cart);
+                }
+                setCartCounter();
             });
         }
     }

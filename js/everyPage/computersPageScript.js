@@ -1,0 +1,4 @@
+setBurgerMenu();
+setViewButtons();
+setCartCounter();
+setBuyButtons();

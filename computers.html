@@ -10,12 +10,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
     <link rel="stylesheet" href="css/normal.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="css/animations.css">
     <!-- подключение скриптов -->
     <!-- мои скрипты -->
     <script src="js/main.js" defer></script>
-    <script src="js/everyPage/cartPageScript.js" defer></script>
+    <script src="js/everyPage/computersPageScript.js" defer></script>
 </head>
 <body>
 
@@ -37,12 +35,12 @@
                                 <span class="item-text">+44-729-84-01</span>
                             </a>
 
-                            <a href="#" class="item-with-icon">
+                            <a href="mailto:ohvatukj@gmail.com" class="item-with-icon">
                                 <img class="item-icon" src="svg/email_letter_mail_icon.svg" alt="X">
                                 <span class="item-text">ohvatukj@gmail.com</span>
                             </a>
 
-                            <a href="#" class="item-with-icon">
+                            <a target="_blank"  href="https://www.google.com/maps/place/%D0%9C%D0%B8%D0%BD%D1%81%D0%BA/@53.8845585,27.4532859,11z/data=!3m1!4b1!4m5!3m4!1s0x46dbcfd35b1e6ad3:0xb61b853ddb570d9!8m2!3d53.9006011!4d27.558972!5m1!1e1?hl=ru-RU" class="item-with-icon">
                                 <img class="item-icon" src="svg/location_map_pin_gps_icon.svg" alt="X">
                                 <span class="item-text">г. Минск</span>
                             </a>
@@ -86,7 +84,7 @@
                         <!-- список желаний и корзина -->
                         <div class="header__wc">
                             <a id="wishlist" class="btn-logo">
-                                <div class="btn-counter"><span>0</span></div>
+                                <div class="btn-counter"><span id="fav-counter">0</span></div>
                                 <img class="item-icon" src="svg/heart_like_likes_love_icon.svg" alt="X">
                                 <span class="item-text">Избранные</span>
                             </a>
@@ -127,8 +125,8 @@
                                     </a>
                                 </li>
                                 <li class="navigator__link">
-                                    <a href="#">
-                                        <input id="computer-page" name="pages" type="radio">
+                                    <a href="computers.html" onclick="document.open('computers.html')">
+                                        <input id="computer-page" name="pages" type="radio" checked>
                                         <label class="nav-btn" for="computer-page">
                                             <span class="nav-btn__text">Компьютеры</span>
                                             <div class="nav-btn__underline"></div>
@@ -166,103 +164,23 @@
         <main class="page">
             <div class="container">
 
-                <!-- контейнер блоков -->
-               <div class="data__container">
-
-                <!-- блок ввода информации -->
-                    <div class="enter-data">
-                        <h1 class="hder">Ваши данные</h1>
-                        <div class="data-input">
-                            <div class="text-with-input">
-                                <span>Фамилия</span>
-                                <input id="surname" class="text-input" type="text" placeholder="Фамилия">
-                            </div>
-                            <div class="text-with-input">
-                                <span>Имя</span>
-                                <input id="name" class="text-input" type="text" placeholder="Имя">
-                            </div>
-                            <div class="text-with-input">
-                                <span>Эл.почта</span>
-                                <input id="mail" class="text-input" type="text" placeholder="E-Mail">
-                            </div>
-                            <div class="text-with-input">
-                                <span>Телефон</span>
-                                <input id="phone" class="text-input" type="text" placeholder="Телефон">
-                            </div>
-                            <div class="text-with-input">
-                                <span>Город</span>
-                                <input id="city" class="text-input" type="text" placeholder="Город">
-                            </div>
-                            <div class="text-with-input">
-                                <span>Адрес</span>
-                                <input id="address" class="text-input" type="text" placeholder="Адрес">
-                            </div>
-                            
-                            <!-- ввод пароля -->
-                            <div class="enter-password">
-                                <p>Для подтверждения заказа, введите свой пароль ниже.</p>
-                                <input id="password" class="text-input" type="password" placeholder="Ваш пароль">
-                            </div>
-
+               <div class="page__content">
+                    <div class="popular-block">
+                        <img class="popular__img" src="img/products/1.jpg" alt="X">
+                        <p class="popular__category">Компьютеры</p>
+                        <a href="#" class="popular__name">HYPERPC PLAY 15</a>
+                        <h1 class="popular__price">$ 4000.00</h1>
+                        <div class="popular__line"></div>
+                        <div class="popular__buttons">
+                            <button class="popular__favorite"><img src="svg/favorite_heart_like_likes_love_icon(black).svg" alt="X"></button>
+                            <button class="popular__compare"><img src="svg/compare_icon(black).svg" alt="X"></button>
+                            <button class="popular__view"><img src="svg/eye_icon(black).svg" alt="X"></button>
                         </div>
-
-                        <h1 class="hder">Дополнительные данные</h1>
-                        <textarea class="text-input" id="information" placeholder="Дополнительная информация (необязательно)"></textarea>
+                        <button class="to-cart">
+                            <img src="svg/cart_shopping_ic_icon(red).svg" alt="">
+                            В КОРЗИНУ
+                        </button>
                     </div>
-
-                <!-- блок заказа -->
-                    <div class="place-order">
-                        <h1 align="center" style="margin: 15px 0 25px;" class="hder">Ваш заказ</h1>
-                        <table class="order-table">
-                            <tr>
-                                <td class="bold">Продукт</td>
-                                <td class="bold">Стоимость</td>
-                            </tr>
-
-                            <!-- список товаров в корзине -->
-
-                            <!-- доставка -->
-                            <tr>
-                                <td style="padding-bottom: 15px;">Доставка</td>
-                                <td style="padding-bottom: 15px;" class="bold">Бесплатно</td>
-                            </tr>
-
-                            <!-- итог -->
-                            <tr>
-                                <td class="bold">Всего</td>
-                                <td class="total-price red bold">$1960.00</td>
-                            </tr>
-                        </table>
-                        <!-- <h3>Оплата:</h3> -->
-                        <div class="order-payment">
-                            <h1 style="margin: 25px 0 15px; font-size: 14px;" class="hder">Тип оплаты:</h1>
-                            <div class="payments">
-                                <input name="payment" type="radio" id="byCard" checked>
-                                <label for="byCard">
-                                    Банковской картой
-                                    <p>Расчет за товары и услуги используя банковскую карту.</p>
-                                </label>
-                            
-                            </div>
-                            <div class="payments">
-                                <input name="payment" type="radio" id="byCash">
-                                <label for="byCash">
-                                    Наличными
-                                    <p>Расчет за товары и услуги наличными деньгами.</p>
-                                </label>
-                            </div>
-                            <div class="payments">
-                                <input name="payment" type="radio" id="byBtc">
-                                <label for="byBtc">
-                                    Биткоинами
-                                    <p>Электронный платёж между сторонами происходит без посредников и необратим — нет механизма отмены подтверждённой операции.</p>
-                                </label>
-                            </div>
-                        </div>
-                        <button id="placeOrder">Оформить заказ</button>
-                    </div>
-
-
                </div>
 
             </div>
@@ -354,6 +272,14 @@
     </div>
 
 
-
+    <!-- абсолютный обозреватель товаров -->
+    <div class="absolute-viewer dn">
+        <div class="viewer__content">
+            <button id="close-button">
+                <img src="svg/close_delete_exit_remove_icon.svg" alt="Товар не выбран">
+            </button>
+            <img src="svg/eye_none_icon.svg" alt="Товар не выбран">
+        </div>
+    </div>
 </body>
 </html>
