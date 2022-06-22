@@ -1,0 +1,10 @@
+.page__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.page__content > *{
+    min-width: 20%;
+    /* max-width: 20%; */
+    z-index: 0;
+}

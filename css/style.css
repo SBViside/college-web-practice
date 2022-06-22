@@ -290,7 +290,8 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
         margin: 15px 10px;
         padding: 20px 10px;
 
-        height: 410px;
+        width: 186px;
+        min-height: 410px;
 
         position: relative;
         z-index: 2000;
@@ -316,7 +317,9 @@ label[for='menu-burger'] .item-text { font-size: 14px; }
             text-transform: uppercase;
         }
         .popular__name {
+            margin: 0 auto;
             margin-bottom: 15px;
+            /* height: 32px; */
             display: block;
 
             color: #000000;
